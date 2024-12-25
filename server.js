@@ -995,6 +995,162 @@ const server = http.createServer((req, res) => {
                 break
             }
 
+            case '/h7e1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7e1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7e2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7e2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7p1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7p1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7p2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7p2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7l1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7l1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7l2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7l2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7v1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7v1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7v2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7v2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7i1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7i1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7i2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7i2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7d1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7d1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h7d2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h7d2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel8.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel8.png'), (err, data) => {
                     if (err) {
@@ -1008,8 +1164,242 @@ const server = http.createServer((req, res) => {
                 break
             }
 
+            case '/h8i1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h8i1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h8i2.png': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h8i2.png'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h8p1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h8p1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h8p2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h8p2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h8r1.png': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h8r1.png'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h8r2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h8r2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel9.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel9.png'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9e1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9e1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9e2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9e2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9p1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9p1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9p2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9p2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9l1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9l1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9l2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9l2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9v1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9v1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9v2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9v2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9extra1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9extra1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9extra2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9extra2.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9m1.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9m1.jpeg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/h9m2.jpeg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/h9m2.jpeg'), (err, data) => {
                     if (err) {
                         res.writeHead(500, { 'Content-Type': 'text/plain' })
                         res.end('Error reading the image')
