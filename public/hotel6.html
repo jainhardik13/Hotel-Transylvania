@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taj Mahal Tower, Colaba, Mumbai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background gradient with black and purple */
+    .bg-gradient {
+      background: linear-gradient(to bottom right, #2c003e, #4b0082, #000000);
+    }
+
+    /* Button Hover Effect */
+    .button-hover:hover {
+      background: #ff5e62; /* Stylish color transition */
+      box-shadow: 0 8px 20px rgba(255, 94, 98, 0.4);
+    }
+
+    /* Stylish Header */
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Hotel Card Styling */
+    .hotel-card {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 1.25rem;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .hotel-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 1.25rem;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .hotel-image:hover {
+      transform: scale(1.1);
+      filter: brightness(80%);
+    }
+
+    /* Title text animations */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Sticky Navigation */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    /* Custom fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Image Gallery Styling */
+    .gallery-image {
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-opacity-80 bg-black">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-3xl font-bold">Hotel Transylvania</h1>
+      <nav class="flex space-x-4">
+        <a href="/login"><button class="bg-white bg-opacity-10 px-4 py-2 rounded hover:bg-opacity-20">Login</button></a>
+        <a href="/"><button class="bg-white bg-opacity-10 px-4 py-2 rounded hover:bg-opacity-20">Home</button></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="bg-black h-6"></div>
+
+  <!-- Hotel Page Main Content -->
+  <main class="container mx-auto py-8 px-8">
+    <!-- Hotel Name and Description -->
+    <div class="text-center">
+      <h2 class="text-5xl font-bold text-white fade-in">Taj Mahal Tower, Colaba, Mumbai</h2>
+      <br>
+      <p class="text-xl text-white mt-4 fade-in">Experience luxury and history at the iconic Taj Mahal Tower, located in the heart of Colaba, Mumbai, offering breathtaking views of the Arabian Sea and Gateway of India.</p>
+    </div>
+
+<!-- Hotel Image -->
+<div class="mt-8">
+    <img src="/hotel6.png" alt="Taj Mahal Tower, Colaba" class="hotel-image mx-auto rounded-2xl shadow-lg fade-in w-[1100px] h-[400px]">
+  </div>
+  
+
+    <!-- Hotel Details Section -->
+    <section class="mt-12 hotel-card fade-in">
+      <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hotel Overview</h3>
+      <p class="mt-4 text-white text-lg">Taj Mahal Tower, part of the Taj Group, is a landmark in Mumbai. This luxury hotel offers world-class amenities and service, providing guests with an unforgettable stay amidst Mumbai's vibrant culture and heritage.</p>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="mt-12 hotel-card fade-in">
+      <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Amenities</h3>
+      <ul class="mt-4 text-white text-lg list-disc pl-8">
+        <li>Free High-Speed Wi-Fi</li>
+        <li>Spa and Wellness Center</li>
+        <li>Outdoor Pool & Jacuzzi</li>
+        <li>Fine Dining Restaurants</li>
+        <li>Fitness Center & Gym</li>
+        <li>Exclusive Concierge Service</li>
+        <li>Event & Conference Facilities</li>
+      </ul>
+    </section>
+
+    <!-- Location Section -->
+    <section class="mt-12 hotel-card fade-in">
+      <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Location</h3>
+      <p class="mt-4 text-white text-lg">Located at Apollo Bunder Road, Colaba, Mumbai, the Taj Mahal Tower offers easy access to the Gateway of India, Elephanta Caves, and the vibrant Colaba Causeway for shopping and dining.</p>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section class="mt-12 hotel-card fade-in">
+      <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Contact Information</h3>
+      <p class="mt-4 text-white text-lg">For inquiries or reservations, please contact:</p>
+      <ul class="mt-4 text-white text-lg">
+        <li>Phone: +91 22 6665 3366</li>
+        <li>Email: <a href="mailto:reservations@tajhotels.com" class="text-blue-400">reservations@tajhotels.com</a></li>
+        <li>Website: <a href="https://www.tajhotels.com/en-in/taj/taj-mahal-tower-mumbai/" class="text-blue-400">tajhotels.com</a></li>
+      </ul>
+    </section>
+
+    <!-- Gallery Section with Hover Effects -->
+    <section class="mt-12">
+      <h3 class="text-3xl font-semibold text-white text-center fade-in">Gallery</h3>
+      <div class="grid grid-cols-3 gap-8 mt-8">
+        <div class="hotel-card hover:scale-105">
+            <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Tower Interior</h3><br>
+            <img src="/hotel6in.jpg" alt="Tower Interior" class="gallery-image w-full h-[200px] object-cover">
+            <br>
+            <img src="/hotel6inii.jpg" alt="Tower Interior" class="gallery-image w-full h-[200px] object-cover">
+        </div>
+
+        <div class="hotel-card hover:scale-105">
+          <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Sea View</h3><br>
+          <img src="/seaview.jpg" alt="Sea View" class="gallery-image w-full h-[200px] object-cover">
+       <br>   <img src="/seaviewii.jpg" alt="Sea View" class="gallery-image w-full h-[200px] object-cover">
+        </div>
+        
+        <div class="hotel-card hover:scale-105">
+          <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Dining Experience</h3><br>
+          <img src="/tajdin.jpg" alt="Hotel Dining" class="gallery-image w-full h-[200px] object-cover">
+        <br>  <img src="/tajdinii.jpg" alt="Hotel Dining" class="gallery-image w-full h-[200px] object-cover">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

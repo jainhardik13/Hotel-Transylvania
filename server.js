@@ -56,6 +56,124 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
+            case '/hotel1': {
+                fs.readFile(path.join(__dirname, 'public','hotel1.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2': {
+                fs.readFile(path.join(__dirname, 'public','hotel2.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3': {
+                fs.readFile(path.join(__dirname, 'public','hotel3.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel4': {
+                fs.readFile(path.join(__dirname, 'public','hotel4.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel5': {
+                fs.readFile(path.join(__dirname, 'public','hotel5.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel6': {
+                fs.readFile(path.join(__dirname, 'public','hotel6.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel7': {
+                fs.readFile(path.join(__dirname, 'public','hotel7.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error loading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel8': {
+                fs.readFile(path.join(__dirname, 'public','hotel8.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel9': {
+                fs.readFile(path.join(__dirname, 'public','hotel9.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel1.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel1.png'), (err, data) => {
                     if (err) {
@@ -68,6 +186,165 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
+            case '/hotel1ex1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel1ex1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+
+            case '/hotel1ex2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel1ex2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+
+            case '/hotel1pool1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1pool1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1pool2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1pool2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1room1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1room1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1room2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1room2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1view1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1view1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1view2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1view2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1benefit1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1benefit1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1benefit2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1benefit2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1meeting1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1meeting1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel1meeting2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel1meeting2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel2.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2.png'), (err, data) => {
                     if (err) {
@@ -80,6 +357,163 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
+            case '/hotel2ex1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2ex1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2ex2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2ex2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2pool1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2pool1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2pool2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2pool2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2room1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2room1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2room2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2room2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2view1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2view1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2view2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2view2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2int1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2int1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2int2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2int2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2dinning1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2dinning1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel2dinning2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel2dinning2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel3.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3.png'), (err, data) => {
                     if (err) {
@@ -92,6 +526,163 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
+            case '/hotel3ex1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3ex1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3ex2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3ex2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3service1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3service1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3service2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3service2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3room1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3room1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3room2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3room2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3view1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3view.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3view2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3view1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3int1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3int1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3int2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3int2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3dinning1.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3dinning1.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel3dinning2.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', 'hotel3dinning2.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel4.jpg': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel4.jpg'), (err, data) => {
                     if (err) {
@@ -104,6 +695,85 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
+            case '/hotelin4.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotelin4.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotelin4ii.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotelin4ii.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotelpool4.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotelpool4.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotelpoolii4.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotelpoolii4.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotelres4.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotelres4.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotelresii4.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotelresii4.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel5.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel5.png'), (err, data) => {
                     if (err) {
@@ -116,6 +786,85 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
+            case '/hotelin5.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotelin5.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotelin5ii.png': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotelin5ii.png'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel5gar.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel5gar.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel5garii.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel5garii.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel5res.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel5res.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel5resii.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel5resii.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel6.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel6.png'), (err, data) => {
                     if (err) {
@@ -128,6 +877,85 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
+            case '/hotel6in.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel6in.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/hotel6inii.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/hotel6inii.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/seaview.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/seaview.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/seaviewii.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/seaviewii.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/tajdin.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/tajdin.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/tajdinii.jpg': {
+                fs.readFile(path.join(__dirname, 'public', 'images', '/tajdinii.jpg'), (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading the image')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'image/png' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel7.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel7.png'), (err, data) => {
                     if (err) {
@@ -140,6 +968,7 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
             case '/hotel8.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel8.png'), (err, data) => {
                     if (err) {
@@ -152,6 +981,7 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
             case '/hotel9.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel9.png'), (err, data) => {
                     if (err) {
@@ -164,6 +994,7 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
             default: {
                 res.writeHead(404, { 'Content-Type': 'text/plain' })
                 res.end('Not Found')
