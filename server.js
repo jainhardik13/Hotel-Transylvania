@@ -174,6 +174,32 @@ const server = http.createServer((req, res) => {
                 break
             }
 
+            case '/feedback': {
+                fs.readFile(path.join(__dirname, 'public','feedback.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
+            case '/thank-you': {
+                fs.readFile(path.join(__dirname, 'public','thank-you.html'), 'utf-8', (err, data) => {
+                    if (err) {
+                        res.writeHead(500, { 'Content-Type': 'text/plain' })
+                        res.end('Error reading this page.')
+                        return
+                    }
+                    res.writeHead(200, { 'Content-Type': 'text/html' })
+                    res.end(data)
+                })
+                break
+            }
+
             case '/hotel1.png': {
                 fs.readFile(path.join(__dirname, 'public', 'images', 'hotel1.png'), (err, data) => {
                     if (err) {
@@ -1039,6 +1065,7 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+            
             case '/register': {
                 let body = ''
                 req.on('data', chunk => {
@@ -1074,6 +1101,46 @@ const server = http.createServer((req, res) => {
                 })
                 break
             }
+
+            case '/feedback': {
+                let body = ''
+                req.on('data', chunk => {
+                    body += chunk.toString()
+                })
+    
+                req.on('end', () => {
+                    const feedback = querystring.parse(body)
+    
+                    // Read existing feedback from feedback.json or create an empty array if file doesn't exist
+                    fs.readFile(path.join(__dirname, 'feedback.json'), 'utf-8', (err, data) => {
+                        let feedbacks = []
+    
+                        if (!err) {
+                            feedbacks = JSON.parse(data)
+                        }
+    
+                        // Save new feedback to the feedbacks array
+                        feedbacks.push({
+                            name: feedback.name,
+                            email: feedback.email,
+                            feedback: feedback.feedback
+                        })
+    
+                        // Write the updated feedbacks array to feedback.json
+                        fs.writeFile(path.join(__dirname, 'feedback.json'), JSON.stringify(feedbacks, null, 2), (err) => {
+                            if (err) {
+                                res.writeHead(500, { 'Content-Type': 'text/plain' })
+                                res.end('Error saving feedback data')
+                                return
+                            }
+                            res.writeHead(302, { 'Location': '/thank-you' })
+                            res.end()
+                        })
+                    })
+                })
+                break
+            }
+
             default: {
                 res.writeHead(404, { 'Content-Type': 'text/plain' })
                 res.end('Not Found')
