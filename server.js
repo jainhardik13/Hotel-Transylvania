@@ -1,10 +1,13 @@
 const express = require('express')
 const path = require('path')
+const morgan = require('morgan');
+
 const PORT = 8081
 //Import Middleware
 const logger = require('./middlewares/logger')
 const errorHandler = require('./middlewares/errorHandler')
 const app = express()
+app.use(morgan('dev'));
 // Middleware to handle JSON and URL-encoded data in POST requests
 app.use(express.json()) // To parse JSON bodies
 app.use(express.urlencoded({ extended: true })) // To parse URL-encoded data
