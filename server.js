@@ -1,6 +1,5 @@
 const express = require('express')
 const path = require('path')
-const morgan = require('morgan');
 
 const PORT = 8081
 //Import Middleware
