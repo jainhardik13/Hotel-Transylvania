@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Background gradient with black and purple */
+    .bg-gradient {
+      background: linear-gradient(to bottom right, #2c003e, #4b0082, #000000);
+    }
+
+    /* Button Hover Effect */
+    .button-hover:hover {
+      background: #ff5e62; /* Stylish color transition */
+      box-shadow: 0 8px 20px rgba(255, 94, 98, 0.4);
+    }
+
+    /* Stylish Header */
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ed3b79, #f35ccf, #825bc2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Hotel Card Styling */
+    .hotel-card {
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 1.25rem;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .hotel-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .hotel-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 1.25rem;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .hotel-image:hover {
+      transform: scale(1.1);
+      filter: brightness(80%);
+    }
+
+    /* Title text animations */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Sticky Navigation */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    /* Custom fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* Image Gallery Styling */
+    .gallery-image {
+      border-radius: 2rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-image:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-grid img {
+      margin-bottom: 16px; /* Consistent spacing */
+    }
+  </style>
+</head>
+
+<body class="bg-gradient text-white min-h-screen">
+
+ <!-- Header -->
+ <header class="bg-opacity-80 bg-black">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-3xl font-bold">Hotel Transylvania</h1>
+      <nav class="flex space-x-4">
+        <a href="/login"><button class="bg-white bg-opacity-10 px-4 py-2 rounded hover:bg-opacity-20">Login</button></a>
+        <a href="/"><button class="bg-white bg-opacity-10 px-4 py-2 rounded hover:bg-opacity-20">Home</button></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="bg-black h-6"></div>
+
+  <!-- Hotel Page Main Content -->
+  <main class="container mx-auto py-8 px-8">
+    <!-- Hotel Name and Description -->
+    <div class="text-center">
+      <h2 class="text-5xl font-bold text-white fade-in"><%= hotel.name %></h2>
+      <p class="text-xl text-white mt-4 fade-in"><%= hotel.about %></p>
+    </div>
+
+    <!-- Hotel Image -->
+    <div class="mt-8">
+      <img src="/images/<%= hotel.gallery[0] %>" class="hotel-image mx-auto rounded-2xl shadow-lg fade-in h-96">
+    </div>
+
+    <!-- Hotel Details Section -->
+    <section class="mt-12 hotel-card fade-in">
+      <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hotel Overview</h3>
+      <p class="mt-4 text-white text-lg"><%= hotel.overview %></p>
+    </section>
+    <!-- Amenities Section -->
+    <section class="mt-12 hotel-card fade-in">
+      <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Amenities</h3>
+      <ul class="mt-4 text-white text-lg list-disc pl-8">
+        <li><%= hotel.Amenities[0] %></li>
+        <li><%= hotel.Amenities[1] %></li>
+        <li><%= hotel.Amenities[2] %></li>
+        <li><%= hotel.Amenities[3] %></li>
+        <li><%= hotel.Amenities[4] %></li>
+        <li><%= hotel.Amenities[5] %></li>
+        <li><%= hotel.Amenities[6] %></li>
+      </ul>
+    </section>
+<!-- good to know section -->
+<section class="mt-12 hotel-card fade-in">
+  <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Good to know</h3>
+    <ul class="mt-4 text-white text-lg list-disc pl-8">
+      <li><%= hotel.goodToKnow[0] %></li>
+      <li><%= hotel.goodToKnow[1] %></li>
+      <li><%= hotel.goodToKnow[2] %></li>
+      <li><%= hotel.goodToKnow[3] %></li>
+      <li><%= hotel.goodToKnow[4] %></li>
+    </ul>
+  </section>
+
+    <!-- Location Section -->
+    <section class="mt-12 hotel-card fade-in">
+      <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Location</h3>
+      <p class="mt-4 text-white text-lg"><%= hotel.location %></p>
+    </section>
+
+    <!-- Contact Details Section -->
+    <section class="mt-12 hotel-card fade-in">
+      <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Contact Information</h3>
+      <p class="mt-4 text-white text-lg">For inquiries or reservations, please contact:</p>
+      <ul class="mt-4 text-white text-lg">
+        <li><%= hotel.phone %></li>
+        <li>Email: <a href="mailto: <%= hotel.email %>" class="text-blue-400"><%= hotel.email %></a></li>
+        <li>Website: <a href="<%= hotel.website %>" class="text-blue-400"><%= hotel.website %></a></li>
+      </ul>
+    </section>
+
+    <!-- Gallery Section with Hover Effects -->
+    <section class="mt-12">
+      <h3 class="text-3xl font-semibold text-white text-center fade-in">Gallery</h3>
+      <div class="grid grid-cols-3 gap-8 mt-8 gallery-grid">
+        <div class="hotel-card hover:scale-105">
+          <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hotel Exterior</h3>
+           <br>
+                <img src="/images/<%= hotel.gallery[1] %>" alt="Hotel Interior" class="gallery-image w-full h-[200px] object-cover">
+                <img src="/images/<%= hotel.gallery[2] %>" alt="Hotel Interior" class="gallery-image w-full h-[200px] object-cover">
+              </div>
+           
+              <div class="hotel-card hover:scale-105">
+                <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hotel Pool</h3>
+                <br>
+                <img src="/images/<%= hotel.gallery[3] %>" alt="Hotel Pool" class="gallery-image w-full h-[200px] object-cover">
+                <img src="/images/<%= hotel.gallery[4] %>" alt="Hotel Pool" class="gallery-image w-full h-[200px] object-cover">
+              </div>
+              
+              <div class="hotel-card hover:scale-105">
+                <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hotel Luxury Rooms</h3>
+                <br>
+                <img src="/images/<%= hotel.gallery[5] %>" alt="Hotel Restaurant" class="gallery-image w-full h-[200px] object-cover">
+                <img src="/images/<%= hotel.gallery[6] %>" alt="Hotel Restaurant" class="gallery-image w-full h-[200px] object-cover">
+              </div>
+              <div class="hotel-card hover:scale-105">
+                <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hotel Views</h3>
+                <br>
+                <img src="/images/<%= hotel.gallery[7] %>" alt="Hotel Restaurant" class="gallery-image w-full h-[200px] object-cover">
+                <img src="/images/<%= hotel.gallery[8] %>" alt="Hotel Restaurant" class="gallery-image w-full h-[200px] object-cover">
+              </div>
+              <div class="hotel-card hover:scale-105">
+                <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hotel's Extra Benefits</h3>
+                <br>
+                <img src="/images/<%= hotel.gallery[9] %>" alt="Hotel Pool" class="gallery-image w-full h-[200px] object-cover">
+                <img src="/images/<%= hotel.gallery[10] %>" alt="Hotel Pool" class="gallery-image w-full h-[200px] object-cover">
+              </div>
+              <div class="hotel-card hover:scale-105">
+                <h3 class="text-3xl font-semibold text-white fade-in" style="font-family: 'Poppins', sans-serif; background: linear-gradient(to right, #a60cac, #ef6c7d, #825bc2); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Hotel Meeting Rooms</h3>
+                <br>
+                <img src="/images/<%= hotel.gallery[11] %>" alt="Hotel Restaurant" class="gallery-image w-full h-[200px] object-cover">
+                <img src="/images/<%= hotel.gallery[12] %>" alt="Hotel Restaurant" class="gallery-image w-full h-[200px] object-cover">
+              </div>
+              
+              
+      </div>
+    </section>
+  </main>
+
+
+
+  <!-- Smooth Scroll Script -->
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .bg-gradient {
+      background: linear-gradient(to bottom right, #2c003e, #4b0082, #000000);
+    }
+
+    .button-hover:hover {
+      background: #3d005a;
+    }
+
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #ed3b79, #f35ccf, #825bc2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(to right, #ed3b79, #f35ccf, #825bc2);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s ease;
+    }
+
+    .floating-button:hover {
+      background: #3d005a;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-opacity-80 bg-black">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-3xl font-bold">Hotel Transylvania</h1>
+      <nav class="flex space-x-4">
+        <a href="/api/login"><button class="bg-white bg-opacity-10 px-4 py-2 rounded hover:bg-opacity-20">Login</button></a>
+        <a href="/"><button class="bg-white bg-opacity-10 px-4 py-2 rounded hover:bg-opacity-20">Home</button></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Divider -->
+  <div class="bg-black h-4"></div>
+
+  <!-- Top Hotels Heading -->
+  <h1 class="text-3xl font-bold text-center mt-8 text-white">Top Hotels</h1>
+
+  <!-- Grid Section -->
+  <main class="container mx-auto py-8 px-6">
+    <div class="grid grid-cols-3 gap-6">
+      <% const hotels = [
+        { id: 1, name: 'The Oberoi Amarvilas, Agra, U.P.', img: 'hotel1.png' },
+        { id: 2, name: 'Umaid Bhawan Palace, Jodhpur, Rajasthan', img: 'hotel2.png' },
+        { id: 3, name: 'Taj Lake Palace, Udaipur, Rajasthan', img: 'hotel3.png' },
+        { id: 4, name: 'The Leela Palace, Bengaluru, Karnataka', img: 'hotel4.jpg' },
+        { id: 5, name: 'The Rambagh Palace, Jaipur, Rajasthan', img: 'hotel5.png' },
+        { id: 6, name: 'Taj Mahal Tower, Colaba, Mumbai', img: 'hotel6.png' },
+        { id: 7, name: 'The Imperial, Delhi', img: 'hotel7.png' },
+        { id: 8, name: 'ITC Grand Chola, Chennai', img: 'hotel8.png' },
+        { id: 9, name: 'Park Plaza, Ludhiana, Punjab', img: 'hotel9.png' },
+      ]; %>
+
+      <% hotels.forEach(hotel => { %>
+        <div class="bg-black bg-opacity-80 shadow-md rounded-2xl overflow-hidden">
+          <img src="/images/<%= hotel.img %>" alt="Hotel Image" class="w-full h-48 object-cover rounded-t-2xl">
+          <p class="text-center mt-4 text-white"><%= hotel.name %></p>
+          <div class="p-4">
+            <button onclick="window.location.href='/hotel<%= hotel.id %>'"
+              class="bg-gradient text-white px-4 py-2 rounded w-full button-hover">Learn More</button>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </main>
+
+  <button onclick="window.location.href='/api/feedback'" class="floating-button">Feedback</button>
+
+</body>
+
+</html>

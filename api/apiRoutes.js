@@ -13,10 +13,10 @@ router.post('/login', (req, res, next) => {
       const user = users.find(u => u.username === username && u.password === password) // Find matching user
       if (user) {
         // If user exists, redirect to the dashboard
-        return res.status(302).redirect('/dashboard.html') // Redirect to dashboard.html
+        return res.status(302).redirect('/dashboard') // Redirect to dashboard.ejs
       } else {
         // If user doesn't exist, redirect to the register page
-        return res.status(302).redirect('/api/register') // Redirect to register.html
+        return res.status(302).redirect('/api/register') // Redirect to register.ejs
       }
     })
   })
@@ -69,7 +69,7 @@ router.post('/feedback', (req, res) => {
               return res.status(500).send('Error saving feedback data')
           }
           // Redirect to thank-you page after successful feedback save
-          res.redirect(302, '/thank-you.html')
+          res.redirect(302, '/thank-you')
       })
   })
 })
