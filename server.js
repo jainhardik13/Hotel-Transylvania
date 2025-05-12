@@ -1,11 +1,13 @@
 const express = require('express')
 const path = require('path')
+const connectDB = require('./config/config');
 
 const PORT = 8081
 //Import Middleware
 const logger = require('./middlewares/logger')
 const errorHandler = require('./middlewares/errorHandler')
 const app = express()
+connectDB() // Connect to MongoDB database
 const morgan = require('morgan')
 app.use(morgan('dev')) // Use morgan for logging requests in development mode
 // Middleware to handle JSON and URL-encoded data in POST requests
@@ -16,7 +18,8 @@ app.use(logger) // Log each request
 // Serve static files (HTML, CSS, JS) from the /public directory
 app.use(express.static(path.join(__dirname, 'public')))
 
-const apiRoutes = require('./api/apiRoutes') // Import the API routes for login, register, feedback functionality
+const apiRoutes = require('./api/apiRoutes'); // Import the API routes for login, register, feedback functionality
+const { connect } = require('http2');
 app.use('/api', apiRoutes) // Mount the API routes on /api path
 
 app.set('view engine', 'ejs');
