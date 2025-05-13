@@ -59,5 +59,40 @@
         </div>
     </div>
 
+    <!-- Show Feedback Button -->
+    <div class="fixed bottom-6 left-6">
+        <button id="loadFeedbacks" class="bg-white bg-opacity-10 px-6 py-2 rounded button-hover text-white">Show Feedbacks</button>
+    </div>
+
+    <!-- Feedback List Container -->
+    <div id="feedbackList" class="container mx-auto mt-10 max-w-2xl hidden space-y-4 px-4">
+        <h2 class="text-2xl font-bold mb-4 text-center">All Feedbacks</h2>
+        <!-- Feedbacks will be loaded here dynamically -->
+    </div>
+
+    <script>
+        document.getElementById("loadFeedbacks").addEventListener("click", async () => {
+            const response = await fetch("/api/feedbacks");
+            const feedbacks = await response.json();
+
+            const container = document.getElementById("feedbackList");
+            container.innerHTML = '<h2 class="text-2xl font-bold mb-4 text-center">All Feedbacks</h2>'; // reset content
+
+            feedbacks.forEach(fb => {
+                const fbBox = document.createElement("div");
+                fbBox.className = "p-4 border rounded bg-white text-black shadow-md";
+                fbBox.innerHTML = `
+                    <p><strong>Name:</strong> ${fb.name}</p>
+                    <p><strong>Email:</strong> ${fb.email}</p>
+                    <p><strong>Message:</strong> ${fb.feedback}</p>
+                    <p class="text-sm text-gray-600"><em>${new Date(fb.createdAt).toLocaleString()}</em></p>
+                `;
+                container.appendChild(fbBox);
+            });
+
+            container.classList.remove("hidden");
+        });
+    </script>
+
 </body>
 </html>

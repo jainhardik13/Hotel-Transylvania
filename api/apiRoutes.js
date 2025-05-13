@@ -46,4 +46,16 @@ router.post('/feedback', async (req, res, next) => {
   }
 });
 
+// Get All Feedbacks
+router.get('/feedbacks', async (req, res) => {
+    try {
+        const feedbacks = await Feedback.find().sort({ createdAt: -1 }); // latest first
+        res.status(200).json(feedbacks);
+    } catch (err) {
+        console.error('Fetching Feedbacks Error:', err);
+        res.status(500).json({ message: 'Server error while fetching feedbacks' });
+    }
+});
+
+
 module.exports = router;
